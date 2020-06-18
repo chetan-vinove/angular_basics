@@ -7,7 +7,8 @@ import { TestComponent } from './test/test.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { TestService } from "./test.service";
 import { CustomDirective } from './custom.directive'
-
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,9 @@ import { CustomDirective } from './custom.directive'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     TestService

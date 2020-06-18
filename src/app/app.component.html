@@ -1,3 +1,30 @@
-<p *ngIf="true">My First App</p>
-<p appCustom>Attribute Directive</p>
-<router-outlet></router-outlet>
+<!-- <p *ngIf="true">My First App</p>
+<p appCustom>Attribute Directive</p> -->
+<!-- <router-outlet></router-outlet> -->
+<form [formGroup]="profileForm">
+    <label>
+        Email:
+        <input type="email" formControlName="email">
+        <span *ngIf="(email?.controls?.firstName?.touched || isSubmitted)&& profileForm?.controls?.firstName?.errors?.required">
+            *Email is Required
+        </span>
+    </label>
+    <br/>
+    <label>
+        First Name:
+        <input type="text" formControlName="firstName">
+        <span *ngIf="profileForm?.controls?.firstName?.errors?.pattern && profileForm?.controls?.firstName?.errors?.required">
+            *First Name is Required
+        </span>
+    </label>
+    <br />
+    <label>
+        Last Name:
+        <input type="text" formControlName="lastName">
+        <span *ngIf="profileForm?.controls?.lastName?.touched && profileForm?.controls?.lastName?.errors?.required">
+            *Last Name is Required
+        </span>
+    </label>
+    <br />
+    <input type="button" (click)="submitForm()" value="Submit" />
+</form>

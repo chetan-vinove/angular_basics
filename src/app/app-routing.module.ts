@@ -5,8 +5,8 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { LazyModule } from './lazy/lazy.module';
 const routes: Routes = [
   {
-    path: "test",
-    component: TestComponent,
+    path: "",
+    component: MyComponentComponent,
   },
   {
     path:'my-module',

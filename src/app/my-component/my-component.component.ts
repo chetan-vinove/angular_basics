@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponentComponent implements OnInit {
 
+  public testValue:string="";
+  public receivedData = "";
   constructor() { }
 
   ngOnInit() {
   }
 
+  public showChildData(event){
+    console.log(event);
+    this.receivedData = event
+  }
 }
