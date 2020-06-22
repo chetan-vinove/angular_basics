@@ -12,7 +12,13 @@ export class LazyComponentComponent implements OnInit {
   }
 
   ngOnInit(){
-    console.log(this.testService.showData());
+    // this.testService.testSubject1.subscribe((data)=>{
+    //   console.log("data", data); 
+    // })
+  }
+
+  public setData(){
+    this.testService.setData("value 1")
   }
 
 }

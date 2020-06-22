@@ -11,7 +11,7 @@ import { TestService } from "../test.service";
     LazyRoutingModule
   ],
   providers:[
-    TestService
+    // TestService
   ]
 })
 export class LazyModule { }
