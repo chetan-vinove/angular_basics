@@ -23,7 +23,7 @@ export class TestService {
   }
 
   public getData(): Observable<any>{
-    return this.http.get('https://reqres.in/api/users?page=2')
+    return this.http.get('https://reqre.in/api/users?page=2')
   }
 
 }

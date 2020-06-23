@@ -9,7 +9,8 @@ import { TestService } from "./test.service";
 import { CustomDirective } from './custom.directive'
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptService } from "./http-intercept.service"
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     // TestService
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptService, multi: true },
   ],
   bootstrap: [AppComponent]
 })
